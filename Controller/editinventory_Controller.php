@@ -39,7 +39,7 @@ $sql = "UPDATE inventory_db SET Property_Description='$property_description', Lo
  Remarks='$remarks' WHERE id='$id'";
 
 if ($data->query($sql) === TRUE) {
-  header("Location: ../inventory.php");
+  header("Location: ../inventory_index.php");
   
 } else {
   echo "Error updating record: " . $data->error;

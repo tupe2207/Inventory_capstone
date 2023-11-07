@@ -1,4 +1,3 @@
-
 <?php
 @include('Controller/db.php');
 @include('partials/header.php');
@@ -7,14 +6,78 @@
 ?>
 <!-- Vertical alignment -->
 <br>
+
+
+<!-- Modal toggle -->
 <div class="d-flex justify-content-end" style="margin-right: 5em;">
-    <button type="button" class="btn btn-primary">Add Inventory</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#example-modal-7">Add User</button>
 </div>
+
+<!-- Modal with form -->
+<div class="modal fade" id="example-modal-7" tabindex="-1" aria-labelledby="modal-title-7" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal-title-7">
+                    Add New User
+                    <br />
+                    <small class="text-body-secondary fw-normal"></small>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="firtName" class="form-label">First Name</label>
+                        <input type="" class="form-control" id="" placeholder="First Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="LastName" class="form-label">Last Name</label>
+                        <input type="" class="form-control" id="" placeholder="Last Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="UName" class="form-label">User Name</label>
+                        <input type="" class="form-control" id="" placeholder="User Name">
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="UName" class="form-label">Role</label>
+                        <input type="" class="form-control" id="" placeholder="Role">
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="mb-3 pb-3 border-bottom">
+                        <button type="submit" class="btn btn-primary w-100">Save</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- TABLE -->
 <br>
 <div class="card table-responsive mw-100 mx-auto rounded-0">
 
     <?php
-    $inventory = "SELECT * FROM inventory_db";
+    $inventory = "SELECT * FROM users";
 
     $result = $data->query($inventory);
     ?>
@@ -22,10 +85,12 @@
         <thead>
             <th>FIRST NAME</th>
             <th>LAST NAME</th>
+            <th>USER NAME</th>
+
             <th>ROLE</th>
             <th>CREATED AT</th>
             <th>UPDATED AT</th>
-          
+
         </thead>
         <tbody>
             <?php
@@ -35,31 +100,36 @@
 
 
             ?>
-            <tr></tr>
+                    <tr></tr>
                     <td>
-                        <?php echo($row['FIRST NAME'])?>
-                    </td>
-
-                    <td>
-                        <?php echo($row['LAST NAME'])?>
+                        <?php echo ($row['first_name']) ?>
                     </td>
 
                     <td>
-                        <?php echo($row['Current_Property_Number'])?>
+                        <?php echo ($row['last_name']) ?>
                     </td>
 
                     <td>
-                        <?php echo($row['Old_Property_Number'])?>
+                        <?php echo ($row['username']) ?>
+                    </td>
+
+
+                    <td>
+                        <?php echo ($row['role']) ?>
+                    </td>
+
+
+                    <td>
+                        <?php echo ($row['created_at']) ?>
                     </td>
 
                     <td>
-                        <?php echo($row['Unit_Measure'])?>
+                        <?php echo ($row['updated_at']) ?>
                     </td>
 
-                    
                     </td>
 
-                    
+
             <?php
                 }
             } else {

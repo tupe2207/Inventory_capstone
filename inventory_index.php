@@ -7,6 +7,9 @@
 
 <!-- Bordered table -->
 
+<div class="d-flex justify-content-end" style="margin-right: 5em;">
+    <a href="./components/addInventory.php" class="btn btn-primary">Add Inventory</a>
+</div>
 
 <?php
 $inventory = "SELECT * FROM inventory_db";

@@ -6,9 +6,7 @@
 ?>
 <!-- Vertical alignment -->
 <br>
-<div class="d-flex justify-content-end" style="margin-right: 5em;">
-    <a href="./components/addInventory.php" class="btn btn-primary">Add Inventory</a>
-</div>
+
 
 <br>
 <div class="row g-3 p-5 d-flex justify-content-around">

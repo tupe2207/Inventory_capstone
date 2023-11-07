@@ -15,7 +15,7 @@
     @include('../partials/sidebar.php');
     @include('../partials/topbar.php');
     ?>
-    <form   action="../Controller/addInventory_Controller.php" method="post">
+    <form action="../Controller/addInventory_Controller.php" method="post">
         <div class="row g-3 p-5 d-flex justify-content-around">
 
 
@@ -65,8 +65,13 @@
             </div>
 
             <div class="col-sm-6">
-                <label for="first-name" class="form-label">Asset Category</label>
                 <input type="text" class="form-control" name="Asset_Category" placeholder="First name" required>
+            </div>
+            <div class="col-sm-6">
+                <label for="first-name" class="form-label">Asset Category</label>
+                <select class="form-select" aria-label="Select example">
+                        <option value="test">test</option>
+                </select>
             </div>
 
 

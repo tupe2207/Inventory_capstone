@@ -22,7 +22,6 @@
 
     <?php
     if (isset($_GET['id'])) {
-        echo ($_GET['id']);
         $inventory_id = $_GET['id'];
     }
 
